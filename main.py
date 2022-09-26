@@ -12,6 +12,11 @@ async def welcome(message: types.Message):
 async def welcome(message: types.Message):
     await message.answer("Some information")
 
+
+@dp.message_handler(commands=['image'])
+async def welcome(message: types.Message):
+    await message.answer_photo("https://www.python.org/static/community_logos/python-powered-h-140x182.png")
+
 answers = []
 
 lang1 = KeyboardButton('English 👍')
